@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b192c" />
+  <meta name="description" content="Track 07 of Harish-Chandra Digital Legacy 2026: discover archival anecdotes, personal interests, and mathematical insights." />
+  <title>Know Harish-Chandra — Track 07 | Digital Legacy 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b192c;
+      --navy-2: #1a2b49;
+      --navy-3: #254969;
+      --ivory: #faf7f0;
+      --paper: #f5f1e9;
+      --paper-deep: #eee7d9;
+      --gold: #c5a059;
+      --gold-bright: #d4af37;
+      --gold-pale: #e8dcb4;
+      --ink: #17283b;
+      --slate: #607083;
+      --line: rgba(22, 40, 59, .12);
+      --white: #fffefa;
+      --shadow: 0 14px 34px rgba(11, 25, 44, .09);
+      --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --mono: "DM Mono", monospace;
+      --radius: 18px;
+      --max-width: 1200px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body { margin: 0; background: var(--ivory); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
+    body.modal-open { overflow: hidden; }
+    a { color: inherit; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 3px; }
+    ::selection { color: var(--navy); background: var(--gold-pale); }
+    .skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 1000; padding: .7rem 1rem; background: var(--white); color: var(--navy); border-radius: 8px; }
+    .skip-link:focus { top: 1rem; }
+    .container { width: min(var(--max-width), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow { margin: 0; color: var(--gold); font: 500 .73rem/1.5 var(--mono); letter-spacing: .16em; text-transform: uppercase; }
+    .serif { font-family: var(--serif); }
+    .muted { color: var(--slate); }
+    .section { padding: 88px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+    .section-head h2 { margin: .55rem 0 .45rem; font: 600 clamp(2rem, 4.1vw, 3.15rem)/1.1 var(--serif); letter-spacing: -.035em; }
+    .section-head p { max-width: 590px; margin: 0; color: var(--slate); }
+    .section-index { color: #b8a882; font: 500 .85rem var(--mono); white-space: nowrap; padding-bottom: .4rem; }
+
+    /* Header and hero */
+    .topbar { background: #071321; color: #e9e4d8; font: 500 .68rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .topbar-inner { display: flex; justify-content: space-between; gap: 14px; padding-block: 10px; }
+    .topbar span:last-child { color: var(--gold-pale); }
+    .site-nav { position: sticky; top: 0; z-index: 100; color: var(--white); background: rgba(11, 25, 44, .96); border-bottom: 1px solid rgba(232,220,180,.14); backdrop-filter: blur(14px); }
+    .nav-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+    .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(212,175,55,.72); border-radius: 50%; color: var(--gold-pale); font: 600 .9rem var(--serif); letter-spacing: -.05em; }
+    .brand-text { display: grid; line-height: 1.25; }
+    .brand-text strong { font: 600 .81rem var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+    .brand-text small { margin-top: 4px; color: #aab5c2; font-size: .72rem; }
+    .back-link { display: inline-flex; align-items: center; gap: 10px; padding: 10px 15px; border: 1px solid rgba(232,220,180,.3); border-radius: 999px; color: #f8f2e3; text-decoration: none; font-size: .82rem; transition: background .2s, border-color .2s, transform .2s; white-space: nowrap; }
+    .back-link:hover { background: rgba(197,160,89,.14); border-color: var(--gold); transform: translateY(-1px); }
+    .back-link .arrow { color: var(--gold-pale); font-size: 1.1rem; }
+    .hero { position: relative; overflow: hidden; color: var(--white); background: radial-gradient(circle at 83% 28%, rgba(37,73,105,.72), transparent 31%), linear-gradient(120deg, var(--navy) 0%, #101f35 62%, #152c45 100%); padding: 78px 0 72px; }
+    .hero::before { content: ""; position: absolute; width: 510px; height: 510px; right: -110px; top: -190px; border: 1px solid rgba(212,175,55,.17); border-radius: 50%; box-shadow: 0 0 0 42px rgba(212,175,55,.025), 0 0 0 84px rgba(212,175,55,.025); pointer-events: none; }
+    .hero::after { content: "HC"; position: absolute; right: max(3vw, calc((100vw - var(--max-width))/2)); bottom: -115px; color: rgba(255,255,255,.025); font: 700 20rem/.8 var(--serif); letter-spacing: -.11em; pointer-events: none; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(260px, .7fr); align-items: center; gap: clamp(40px, 7vw, 100px); }
+    .hero h1 { max-width: 800px; margin: 18px 0 20px; font: 600 clamp(2.65rem, 5vw, 4.7rem)/1.04 var(--serif); letter-spacing: -.045em; }
+    .hero h1 em { color: var(--gold-pale); font-weight: 500; }
+    .hero-copy { max-width: 660px; color: #cbd3dd; font-size: 1rem; }
+    .hero-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 27px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border: 1px solid rgba(232,220,180,.2); border-radius: 999px; color: #e8e2d5; font: 500 .66rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+    .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-bright); }
+    .hero-art { position: relative; min-height: 315px; display: grid; place-items: center; }
+    .archive-frame { position: relative; width: min(100%, 330px); aspect-ratio: .91; overflow: hidden; border: 1px solid rgba(212,175,55,.55); padding: 12px; background: rgba(255,255,255,.035); box-shadow: 16px 16px 0 rgba(197,160,89,.08); transform: rotate(2deg); }
+    .archive-inner { display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 23px 21px 19px; border: 1px solid rgba(232,220,180,.17); background: linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.015)); }
+    .archive-top { display: flex; justify-content: space-between; color: #c8c7bd; font: .61rem var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+    .portrait-photo { display: block; align-self: center; width: 156px; height: 178px; object-fit: cover; object-position: center 28%; border: 1px solid rgba(212,175,55,.78); outline: 1px solid rgba(232,220,180,.26); outline-offset: 5px; background: #d7d2c7; filter: grayscale(100%) contrast(1.04); box-shadow: 0 8px 24px rgba(0,0,0,.22); }
+    .portrait-photo:hover { filter: grayscale(65%) contrast(1.04); }
+    .portrait-credit { max-width: 290px; margin: 10px auto 0; color: #9aa9b8; font: .58rem/1.5 var(--mono); text-align: center; }
+    .portrait-credit a { color: #d9c99d; text-decoration: underline; text-decoration-color: rgba(217,201,157,.45); text-underline-offset: 2px; }
+    .portrait-credit a:hover { color: #fff3cd; }
+    .archive-caption { display: flex; justify-content: space-between; align-items: end; gap: 8px; color: #f0e8d5; }
+    .archive-caption strong { display: block; font: 600 1.05rem var(--serif); }
+    .archive-caption small { color: #b7c0cb; font-size: .66rem; }
+    .stamp { display: grid; place-items: center; width: 55px; height: 55px; border: 1px solid rgba(212,175,55,.6); border-radius: 50%; color: var(--gold-pale); font: 500 .56rem/1.3 var(--mono); text-align: center; transform: rotate(-13deg); }
+    .hero-footnote { position: absolute; bottom: -21px; right: -4px; color: #8b9aaa; font: .64rem var(--mono); letter-spacing: .06em; }
+
+    /* Discovery controls */
+    .discover { padding: 38px 0 29px; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .discover-top { display: flex; justify-content: space-between; align-items: center; gap: 22px; margin-bottom: 22px; }
+    .discover-label { color: var(--navy-2); font: 600 .78rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    .search-wrap { position: relative; width: min(100%, 360px); }
+    .search-wrap svg { position: absolute; left: 15px; top: 50%; width: 18px; height: 18px; color: #8b8c85; transform: translateY(-50%); pointer-events: none; }
+    .search-input { display: block; width: 100%; padding: 12px 16px 12px 43px; color: var(--ink); background: var(--white); border: 1px solid #dfd8ca; border-radius: 999px; font-size: .84rem; outline: 0; transition: box-shadow .2s, border-color .2s; }
+    .search-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(197,160,89,.18); }
+    .filters { display: flex; flex-wrap: wrap; gap: 9px; }
+    .filter-btn { padding: 9px 14px; border: 1px solid #ddd4c3; border-radius: 999px; background: transparent; color: #5f6a76; font-size: .78rem; transition: all .2s ease; }
+    .filter-btn:hover { border-color: var(--gold); color: var(--navy); }
+    .filter-btn[aria-pressed="true"] { color: var(--white); background: var(--navy-2); border-color: var(--navy-2); box-shadow: 0 5px 12px rgba(11,25,44,.12); }
+    .result-line { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-top: 19px; color: #8b8c85; font: .68rem var(--mono); }
+    .reset-btn { padding: 0; border: 0; background: transparent; color: var(--navy-3); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Flashcard deck */
+    .deck-section { padding-top: 72px; }
+    .deck-note { display: flex; align-items: center; gap: 9px; color: var(--slate); font-size: .8rem; }
+    .deck-note span { display: grid; place-items: center; width: 25px; height: 25px; color: var(--navy-2); background: var(--paper-deep); border-radius: 50%; font-size: .9rem; }
+    .fact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 21px; }
+    .fact-card { position: relative; min-width: 0; min-height: 374px; perspective: 1400px; }
+    .flip-inner { position: absolute; inset: 0; transform-style: preserve-3d; transition: transform .72s cubic-bezier(.2,.75,.18,1); }
+    .fact-card.is-flipped .flip-inner { transform: rotateY(180deg); }
+    .card-face { position: absolute; inset: 0; display: flex; flex-direction: column; overflow: hidden; padding: 22px 22px 73px; border: 1px solid #e5ddcf; border-radius: var(--radius); background: var(--white); box-shadow: 0 8px 24px rgba(11,25,44,.045); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .card-front::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 78px; background: var(--gold); }
+    .card-front { transition: box-shadow .25s, border-color .25s; }
+    .fact-card:hover .card-front { border-color: rgba(197,160,89,.7); box-shadow: var(--shadow); }
+    .card-back { transform: rotateY(180deg); background: #f4efe5; border-color: #d8c8a6; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #c5a059 #f4efe5; }
+    .card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 24px; }
+    .card-number { color: #b49a5e; font: 500 .68rem var(--mono); letter-spacing: .08em; }
+    .tag { display: inline-flex; padding: 4px 7px; border-radius: 3px; background: #edf0f2; color: #36516d; font: 500 .56rem var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+    .card-icon { display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 18px; border: 1px solid #e2d5b4; border-radius: 16px 16px 16px 4px; background: linear-gradient(145deg, #fbf4df, #f1e6c9); color: var(--navy-2); font: 2rem var(--serif); }
+    .card-face h3 { margin: 0 0 10px; color: var(--navy); font: 600 1.35rem/1.22 var(--serif); letter-spacing: -.025em; }
+    .card-front .hook { margin: 0; color: var(--slate); font-size: .87rem; line-height: 1.6; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 20px; }
+    .mini-tag { padding: 4px 7px; border: 1px solid #e7e0d4; border-radius: 3px; color: #78818a; font-size: .65rem; }
+    .flip-control { position: absolute; z-index: 5; left: 22px; right: 22px; bottom: 19px; display: flex; align-items: center; justify-content: space-between; gap: 10px; width: calc(100% - 44px); padding: 10px 12px; border: 0; border-radius: 8px; color: var(--white); background: var(--navy-3); font-size: .75rem; font-weight: 700; transition: background .2s, transform .2s; }
+    .flip-control:hover { background: var(--navy); transform: translateY(-1px); }
+    .flip-control .turn-icon { color: var(--gold-pale); font-size: 1rem; }
+    .back-kicker { margin-bottom: 7px; color: #92763a; font: 500 .66rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .card-back h3 { margin-bottom: 12px; font-size: 1.28rem; }
+    .card-back .story { margin: 0; color: #4a5967; font-size: .83rem; line-height: 1.68; }
+    .insight { margin-top: 16px; padding: 10px 12px; border-left: 2px solid var(--gold); background: rgba(255,255,255,.56); color: #314456; font-size: .78rem; }
+    .source-link { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; margin-top: auto; padding-top: 13px; color: #355777; font-size: .7rem; font-weight: 700; text-decoration: none; }
+    .source-link:hover { color: #996f1e; text-decoration: underline; text-underline-offset: 3px; }
+    .empty-state { grid-column: 1/-1; padding: 48px 20px; border: 1px dashed #d4c8b1; border-radius: var(--radius); text-align: center; color: var(--slate); }
+    .empty-state strong { display: block; margin-bottom: 7px; color: var(--navy); font: 600 1.4rem var(--serif); }
+    .deck-foot { display: flex; justify-content: center; margin-top: 28px; }
+    .outline-btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 17px; border: 1px solid #d7c9aa; border-radius: 999px; background: transparent; color: var(--navy-2); font-size: .81rem; font-weight: 700; transition: all .2s; }
+    .outline-btn:hover { background: var(--paper-deep); border-color: var(--gold); }
+
+    /* Timeline */
+    .timeline-section { color: var(--white); background: var(--navy); position: relative; overflow: hidden; }
+    .timeline-section::before { content: ""; position: absolute; left: -160px; bottom: -210px; width: 500px; height: 500px; border: 1px solid rgba(212,175,55,.14); border-radius: 50%; box-shadow: 0 0 0 40px rgba(212,175,55,.025), 0 0 0 80px rgba(212,175,55,.02); }
+    .timeline-section .section-head { position: relative; }
+    .timeline-section .section-head h2 { color: var(--white); }
+    .timeline-section .section-head p { color: #b5c0cb; }
+    .timeline-layout { position: relative; display: grid; grid-template-columns: .86fr 1.3fr; gap: 42px; align-items: stretch; }
+    .timeline-nav { position: relative; display: flex; flex-direction: column; gap: 8px; padding-left: 22px; }
+    .timeline-nav::before { content: ""; position: absolute; left: 7px; top: 22px; bottom: 22px; width: 1px; background: rgba(232,220,180,.28); }
+    .time-tab { position: relative; display: grid; grid-template-columns: 62px 1fr; align-items: center; gap: 12px; width: 100%; padding: 15px 13px; border: 1px solid transparent; border-radius: 11px; background: transparent; text-align: left; color: #b6c0ca; transition: all .22s; }
+    .time-tab::before { content: ""; position: absolute; left: -20px; top: calc(50% - 5px); width: 9px; height: 9px; border: 2px solid #788798; background: var(--navy); border-radius: 50%; }
+    .time-tab[aria-selected="true"] { background: rgba(255,255,255,.07); border-color: rgba(212,175,55,.28); color: var(--white); }
+    .time-tab[aria-selected="true"]::before { border-color: var(--gold-bright); background: var(--gold-bright); box-shadow: 0 0 0 5px rgba(212,175,55,.1); }
+    .time-year { color: var(--gold-pale); font: 500 .69rem var(--mono); }
+    .time-tab strong { display: block; font: 600 1rem var(--serif); }
+    .time-tab small { display: block; margin-top: 3px; color: #8f9eae; font-size: .7rem; }
+    .timeline-panel { min-height: 310px; padding: clamp(25px,4vw,43px); border: 1px solid rgba(232,220,180,.22); border-radius: var(--radius); background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025)); }
+    .timeline-panel .panel-no { color: var(--gold); font: 500 .7rem var(--mono); letter-spacing: .13em; }
+    .timeline-panel h3 { margin: 12px 0 14px; color: var(--white); font: 600 clamp(1.6rem,2.5vw,2.25rem)/1.14 var(--serif); }
+    .timeline-panel p { color: #c0cad4; font-size: .9rem; }
+    .timeline-panel .context-chip { display: inline-flex; margin-top: 8px; padding: 6px 9px; border: 1px solid rgba(212,175,55,.28); border-radius: 4px; color: var(--gold-pale); font: .63rem var(--mono); text-transform: uppercase; letter-spacing: .07em; }
+    .editorial-note { position: relative; margin-top: 25px; padding: 13px 16px; border-left: 2px solid var(--gold); color: #aeb9c6; background: rgba(255,255,255,.035); font-size: .75rem; }
+
+    /* Quotes and accordion */
+    .archive-section { background: var(--paper); }
+    .archive-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; }
+    .quote-panel { display: flex; flex-direction: column; justify-content: space-between; min-height: 370px; padding: clamp(25px,4vw,40px); background: var(--white); border: 1px solid #e3dac9; border-radius: var(--radius); box-shadow: 0 8px 22px rgba(11,25,44,.035); }
+    .quote-mark { color: var(--gold); font: 5.4rem/.65 var(--serif); }
+    .quote-text { margin: 22px 0 26px; color: var(--navy); font: 500 clamp(1.5rem,2.6vw,2.2rem)/1.35 var(--serif); letter-spacing: -.025em; }
+    .quote-byline { display: flex; align-items: center; gap: 12px; }
+    .avatar { flex: 0 0 auto; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #dccb9d; border-radius: 50%; background: #f3e9d1; color: var(--navy-2); font: 600 .72rem var(--mono); }
+    .quote-byline strong { display: block; color: var(--navy); font-size: .82rem; }
+    .quote-byline small { display: block; color: var(--slate); font-size: .7rem; }
+    .quote-source { display: inline-block; margin-top: 16px; color: #355777; font-size: .69rem; font-weight: 700; text-decoration: none; text-underline-offset: 3px; }
+    .quote-source:hover { color: #996f1e; text-decoration: underline; }
+    .quote-controls { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 25px; }
+    .quote-dots { display: flex; gap: 6px; }
+    .quote-dot { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 99px; background: #d9d0bf; transition: all .2s; }
+    .quote-dot[aria-current="true"] { width: 23px; background: var(--gold); }
+    .quote-arrows { display: flex; gap: 7px; }
+    .round-btn { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #d9d0bf; border-radius: 50%; background: transparent; color: var(--navy-2); transition: all .2s; }
+    .round-btn:hover { background: var(--navy-2); color: white; border-color: var(--navy-2); }
+    .memory-panel { padding: 27px; border: 1px solid #e3dac9; border-radius: var(--radius); background: #f9f5ed; }
+    .memory-panel h3 { margin: 2px 0 18px; font: 600 1.55rem var(--serif); color: var(--navy); }
+    .memory-panel .eyebrow { margin-bottom: 8px; }
+    .memory-list { display: grid; gap: 10px; }
+    details.memory-item { border: 1px solid #e2d8c6; border-radius: 10px; background: rgba(255,255,255,.62); }
+    .memory-item summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; list-style: none; cursor: pointer; padding: 14px 15px; color: var(--navy-2); font: 600 .95rem var(--serif); }
+    .memory-item summary::-webkit-details-marker { display: none; }
+    .memory-item summary::after { content: "+"; color: #ad8b41; font: 400 1.2rem var(--sans); }
+    .memory-item[open] summary::after { content: "−"; }
+    .memory-body { padding: 0 15px 15px; color: var(--slate); font-size: .8rem; }
+    .memory-body p { margin: 0 0 10px; }
+    .memory-body a { color: var(--navy-3); font-weight: 700; font-size: .72rem; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    /* Surprise fact */
+    .surprise-section { padding: 70px 0; background: #ece4d4; }
+    .surprise-wrap { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 32px; }
+    .surprise-wrap h2 { margin: 8px 0 9px; color: var(--navy); font: 600 clamp(1.9rem,3vw,2.8rem)/1.15 var(--serif); }
+    .surprise-wrap p { max-width: 650px; margin: 0; color: #64707b; font-size: .9rem; }
+    .surprise-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 15px 21px; border: 0; border-radius: 10px; color: var(--white); background: var(--navy-2); box-shadow: 0 9px 20px rgba(11,25,44,.15); font-size: .85rem; font-weight: 700; white-space: nowrap; transition: all .2s; }
+    .surprise-btn:hover { background: var(--navy); transform: translateY(-2px); box-shadow: 0 12px 23px rgba(11,25,44,.2); }
+    .surprise-btn .spark { color: var(--gold-pale); font-size: 1.2rem; }
+
+    /* Footer and modal */
+    footer { color: #c1cad4; background: #071321; padding: 42px 0 24px; }
+    .footer-top { display: grid; grid-template-columns: 1.1fr 1fr; gap: 45px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 13px; }
+    .footer-brand .brand-mark { flex-shrink: 0; }
+    .footer-brand strong { display: block; color: white; font: 600 1rem var(--serif); }
+    .footer-brand small { color: #8796a6; font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .footer-copy { max-width: 450px; margin: 0; color: #9eacbb; font-size: .81rem; }
+    .credits { padding: 19px 20px; border: 1px solid rgba(212,175,55,.25); border-radius: 12px; background: rgba(255,255,255,.035); }
+    .credits .eyebrow { margin-bottom: 9px; }
+    .credits strong { display: block; color: white; font: 600 1.05rem var(--serif); }
+    .credits p { margin: 5px 0 0; color: #9eacbb; font-size: .78rem; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding-top: 19px; color: #748496; font: .65rem var(--mono); }
+    .footer-bottom a { color: #c4b27c; text-decoration: none; }
+    .footer-bottom a:hover { text-decoration: underline; }
+    .modal-backdrop { position: fixed; inset: 0; z-index: 500; display: grid; place-items: center; padding: 20px; background: rgba(3,10,18,.74); backdrop-filter: blur(8px); opacity: 0; visibility: hidden; transition: opacity .24s, visibility .24s; }
+    .modal-backdrop.is-open { opacity: 1; visibility: visible; }
+    .fact-modal { position: relative; width: min(100%, 600px); max-height: min(85vh, 760px); overflow: auto; padding: clamp(26px,5vw,46px); border: 1px solid #dfc98f; border-radius: 20px; background: var(--ivory); box-shadow: 0 25px 90px rgba(0,0,0,.35); transform: translateY(16px) scale(.98); transition: transform .24s; }
+    .modal-backdrop.is-open .fact-modal { transform: translateY(0) scale(1); }
+    .modal-close { position: absolute; top: 17px; right: 17px; display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid #ded5c4; border-radius: 50%; background: transparent; color: var(--navy); font-size: 1.15rem; }
+    .modal-close:hover { background: var(--paper-deep); }
+    .modal-icon { display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 20px; border: 1px solid #d9c796; border-radius: 17px 17px 17px 5px; background: #f3e8c9; color: var(--navy-2); font: 2rem var(--serif); }
+    .fact-modal h2 { margin: 8px 36px 14px 0; font: 600 clamp(1.8rem,4vw,2.5rem)/1.15 var(--serif); color: var(--navy); }
+    .fact-modal .modal-story { color: #556271; font-size: .92rem; }
+    .modal-insight { margin-top: 20px; padding: 15px 17px; border-left: 3px solid var(--gold); background: var(--paper); color: #304456; font-size: .85rem; }
+    .modal-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 20px; padding-top: 17px; border-top: 1px solid #e5ddce; }
+    .modal-bottom .source-link { margin: 0; padding: 0; }
+    .modal-bottom .outline-btn { font-size: .75rem; }
+
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: minmax(0,1fr) minmax(220px,.62fr); gap: 35px; }
+      .hero h1 { font-size: clamp(2.6rem,5.8vw,4rem); }
+      .fact-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .timeline-layout { grid-template-columns: .95fr 1.2fr; gap: 24px; }
+      .archive-grid { grid-template-columns: 1fr; }
+      .quote-panel { min-height: 330px; }
+    }
+    @media (max-width: 700px) {
+      .container { width: min(var(--max-width), calc(100% - 32px)); }
+      .section { padding: 64px 0; }
+      .topbar-inner { font-size: .57rem; }
+      .topbar-inner span:last-child { text-align: right; }
+      .nav-inner { min-height: 66px; }
+      .brand-mark { width: 34px; height: 34px; }
+      .brand-text strong { font-size: .7rem; }
+      .brand-text small { font-size: .62rem; }
+      .back-link { padding: 8px 11px; font-size: .72rem; gap: 6px; }
+      .hero { padding: 56px 0 60px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 20px; }
+      .hero h1 { max-width: 570px; font-size: clamp(2.6rem,10vw,4rem); }
+      .hero-copy { font-size: .92rem; }
+      .hero-art { min-height: 275px; margin-top: 3px; }
+      .archive-frame { width: 245px; }
+      .archive-inner { padding: 15px; }
+      .portrait-photo { width: 139px; height: 161px; }
+      .hero-footnote { right: 9px; bottom: -13px; }
+      .discover-top { align-items: stretch; flex-direction: column; }
+      .search-wrap { width: 100%; }
+      .filters { gap: 7px; }
+      .filter-btn { padding: 8px 11px; font-size: .72rem; }
+      .section-head { display: block; }
+      .section-index { display: block; margin-top: 12px; }
+      .fact-grid { grid-template-columns: 1fr; gap: 15px; }
+      .fact-card { min-height: 360px; }
+      .card-face { padding: 20px 20px 72px; }
+      .card-top { margin-bottom: 20px; }
+      .flip-control { left: 20px; right: 20px; width: calc(100% - 40px); }
+      .deck-note { margin-top: 18px; }
+      .timeline-layout { grid-template-columns: 1fr; }
+      .timeline-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-left: 0; }
+      .timeline-nav::before, .time-tab::before { display: none; }
+      .time-tab { grid-template-columns: 1fr; gap: 5px; padding: 12px; border-color: rgba(255,255,255,.1); }
+      .time-year { font-size: .6rem; }
+      .time-tab strong { font-size: .9rem; }
+      .time-tab small { font-size: .64rem; }
+      .timeline-panel { min-height: 0; }
+      .surprise-wrap { grid-template-columns: 1fr; gap: 22px; }
+      .surprise-btn { justify-self: start; white-space: normal; }
+      .footer-top { grid-template-columns: 1fr; gap: 24px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Official Student Exhibition</span>
+      <span>Centenary Celebration · 1923—2023 / 2026 Digital Legacy</span>
+    </div>
+  </div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Know Harish-Chandra home">
+        <span class="brand-mark" aria-hidden="true">HC</span>
+        <span class="brand-text"><strong>Harish-Chandra</strong><small>Digital Legacy 2026 · Track 07</small></span>
+      </a>
+      <a class="back-link" id="backToExhibition" href="../index.html#track-07"><span class="arrow" aria-hidden="true">←</span> Back to Exhibition</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Track 07 · Did You Know &amp; Insights</p>
+        <h1>Know Harish-Chandra: <em>The Humane, Artistic, and Disciplined Mind</em></h1>
+        <p class="hero-copy">Beyond the theorems lies a thoughtful life: a young reader captivated by quantum mechanics, a painterly eye, an exacting sense of proof, and conversations that shaped modern mathematics. Explore the archival threads that bring the person behind the legacy into focus.</p>
+        <div class="hero-meta" aria-label="Exhibition themes">
+          <span class="pill"><span class="dot"></span> People &amp; ideas</span>
+          <span class="pill"><span class="dot"></span> Archival anecdotes</span>
+          <span class="pill"><span class="dot"></span> Mathematical life</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Archival photograph of Harish-Chandra">
+        <div>
+          <div class="archive-frame">
+            <div class="archive-inner">
+              <div class="archive-top"><span>Archive / 07</span><span>HC—1923</span></div>
+              <img class="portrait-photo" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Harish-Chandra_3.jpg" alt="Archival photograph of Harish-Chandra, pictured in profile outdoors" width="253" height="326" fetchpriority="high" decoding="async" />
+              <div class="archive-caption">
+                <div><strong>Harish-Chandra</strong><small>Mathematician · 1923–1983</small></div>
+                <div class="stamp">FIELD<br>NOTES<br>07</div>
+              </div>
+            </div>
+          </div>
+          <p class="portrait-credit">Portrait: author not identified · <a href="https://commons.wikimedia.org/wiki/File:Harish-Chandra_3.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="discover" aria-label="Search and filter facts">
+      <div class="container">
+        <div class="discover-top">
+          <div class="discover-label">The field-note index <span aria-hidden="true">/</span> Browse the archive</div>
+          <label class="search-wrap" for="factSearch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg>
+            <input class="search-input" id="factSearch" type="search" placeholder="Search facts, people, ideas…" autocomplete="off" />
+          </label>
+        </div>
+        <div class="filters" id="filterButtons" role="group" aria-label="Filter facts by theme">
+          <button class="filter-btn" type="button" data-filter="All" aria-pressed="true">All field notes</button>
+          <button class="filter-btn" type="button" data-filter="Art & Painting" aria-pressed="false">Art &amp; Painting</button>
+          <button class="filter-btn" type="button" data-filter="Daily Discipline" aria-pressed="false">Daily Discipline</button>
+          <button class="filter-btn" type="button" data-filter="Anecdotes" aria-pressed="false">Anecdotes</button>
+          <button class="filter-btn" type="button" data-filter="Dirac & Princeton" aria-pressed="false">Dirac &amp; Princeton</button>
+          <button class="filter-btn" type="button" data-filter="Mathematical Philosophy" aria-pressed="false">Mathematical Philosophy</button>
+        </div>
+        <div class="result-line"><span id="resultCount" aria-live="polite">12 field notes</span><button class="reset-btn" id="resetFilters" type="button">Reset search &amp; filters</button></div>
+      </div>
+    </section>
+
+    <section class="section deck-section" id="field-notes">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Flip to discover</p>
+            <h2>Small details. <span style="color:var(--gold)">Larger truths.</span></h2>
+            <p>Each card opens onto a documented moment, an intellectual turning point, or a personal detail preserved in biographical accounts.</p>
+          </div>
+          <div class="deck-note"><span aria-hidden="true">↻</span> Turn a card to read the story</div>
+        </div>
+        <div class="fact-grid" id="factGrid" aria-live="polite"></div>
+        <div class="deck-foot"><button class="outline-btn" id="showAllFacts" type="button">Show all field notes <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">A life in inquiry</p>
+            <h2>From first questions to lasting theory</h2>
+            <p>Move through the places and phases that shaped Harish-Chandra’s intellectual path.</p>
+          </div>
+          <span class="section-index">CHRONOLOGY / 01–05</span>
+        </div>
+        <div class="timeline-layout">
+          <div class="timeline-nav" id="timelineTabs" role="tablist" aria-label="Life and work timeline">
+            <button type="button" class="time-tab" role="tab" id="time-tab-0" aria-controls="timelinePanel" aria-selected="true" data-time="0"><span class="time-year">1941–43</span><span><strong>Allahabad</strong><small>Physics takes hold</small></span></button>
+            <button type="button" class="time-tab" role="tab" id="time-tab-1" aria-controls="timelinePanel" aria-selected="false" data-time="1"><span class="time-year">1945–47</span><span><strong>Cambridge</strong><small>A shift in perspective</small></span></button>
+            <button type="button" class="time-tab" role="tab" id="time-tab-2" aria-controls="timelinePanel" aria-selected="false" data-time="2"><span class="time-year">1947–50</span><span><strong>Princeton</strong><small>Mathematics comes forward</small></span></button>
+            <button type="button" class="time-tab" role="tab" id="time-tab-3" aria-controls="timelinePanel" aria-selected="false" data-time="3"><span class="time-year">1950–63</span><span><strong>Columbia &amp; beyond</strong><small>Building a new framework</small></span></button>
+            <button type="button" class="time-tab" role="tab" id="time-tab-4" aria-controls="timelinePanel" aria-selected="false" data-time="4"><span class="time-year">1963–83</span><span><strong>Institute for Advanced Study</strong><small>A lasting research home</small></span></button>
+          </div>
+          <div class="timeline-panel" id="timelinePanel" role="tabpanel" aria-labelledby="time-tab-0" tabindex="0">
+            <span class="panel-no" id="timelineNo">CHAPTER 01 · 1941–43</span>
+            <h3 id="timelineTitle">A book opens a door</h3>
+            <p id="timelineDescription">At the University of Allahabad, Harish-Chandra studied theoretical physics after encountering P. A. M. Dirac’s book on quantum mechanics. That early fascination led him into research with Homi J. Bhabha at the Indian Institute of Science in Bangalore.</p>
+            <span class="context-chip" id="timelineChip">Origins · Physics</span>
+          </div>
+        </div>
+        <div class="editorial-note"><strong>Curatorial note:</strong> This is a timeline of documented intellectual phases, not a literal hour-by-hour daily schedule. The surviving sources support his sustained focus and scholarly conversations, but not a precise daily timetable.</div>
+      </div>
+    </section>
+
+    <section class="section archive-section" id="archive-memories">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Voices from the archive</p>
+            <h2>Ideas, remembered.</h2>
+            <p>Quotes and short recollections offer a glimpse of the temperament behind the mathematics. Quotations are attributed to their documented context.</p>
+          </div>
+          <span class="section-index">MEMORY / 02</span>
+        </div>
+        <div class="archive-grid">
+          <div class="quote-panel" aria-label="Quote carousel">
+            <div>
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <p class="quote-text" id="quoteText">In mathematics we agree that clear thinking is very important, but fuzzy thinking is just as important.</p>
+              <div class="quote-byline">
+                <div class="avatar" id="quoteAvatar" aria-hidden="true">HC</div>
+                <div><strong id="quoteAuthor">Harish-Chandra</strong><small id="quoteContext">On intuition and mathematical discovery</small></div>
+              </div>
+              <a class="quote-source" id="quoteSource" href="https://publications.ias.edu/sites/default/files/harish-chandra-biographical-memoirs_rpl_5.pdf" target="_blank" rel="noopener noreferrer">Read source context ↗</a>
+            </div>
+            <div class="quote-controls">
+              <div class="quote-dots" id="quoteDots" aria-label="Choose a quote"></div>
+              <div class="quote-arrows"><button class="round-btn" id="quotePrev" type="button" aria-label="Previous quote">←</button><button class="round-btn" id="quoteNext" type="button" aria-label="Next quote">→</button></div>
+            </div>
+          </div>
+          <div class="memory-panel">
+            <p class="eyebrow">Open a memory</p>
+            <h3>People around the work</h3>
+            <div class="memory-list">
+              <details class="memory-item">
+                <summary>Dirac’s answer about proofs</summary>
+                <div class="memory-body"><p>As recounted in Robert P. Langlands’s biographical memoir, Harish-Chandra worried that his early work with unbounded operators lacked sufficient rigor. Dirac is remembered as replying, “I am not interested in proofs but only in what nature does.” The exchange helped clarify Harish-Chandra’s growing preference for mathematics.</p><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Harish-Chandra/" target="_blank" rel="noopener noreferrer">Read the biographical account ↗</a></div>
+              </details>
+              <details class="memory-item">
+                <summary>A correction that became a friendship</summary>
+                <div class="memory-body"><p>While attending a lecture by Wolfgang Pauli in Cambridge, Harish-Chandra pointed out a mistake in Pauli’s work. The biographical record notes that the two went on to become lifelong friends—a telling reminder that intellectual precision and collegial respect can reinforce one another.</p><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Harish-Chandra/" target="_blank" rel="noopener noreferrer">Read the biographical account ↗</a></div>
+              </details>
+              <details class="memory-item">
+                <summary>Walking conversations with André Weil</summary>
+                <div class="memory-body"><p>During a 1957–58 Guggenheim fellowship in Paris, Harish-Chandra worked with André Weil; the two often went walking together. It is a small but memorable detail from a life often summarized through technical achievements alone.</p><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Harish-Chandra/" target="_blank" rel="noopener noreferrer">Read the biographical account ↗</a></div>
+              </details>
+              <details class="memory-item">
+                <summary>Robert Langlands on the reach of his work</summary>
+                <div class="memory-body"><p>In his biographical memoir, Robert Langlands describes Harish-Chandra as one of the mathematicians who helped transform infinite-dimensional group representation theory from a peripheral topic into a major field of modern mathematics.</p><a href="https://publications.ias.edu/sites/default/files/harish-chandra-biographical-memoirs_rpl_5.pdf" target="_blank" rel="noopener noreferrer">Read Langlands’s memoir ↗</a></div>
+              </details>
+              <details class="memory-item">
+                <summary>Armand Borel and the mathematical legacy</summary>
+                <div class="memory-body"><p>Armand Borel wrote recollections of Harish-Chandra and discussed his contributions to representation theory and harmonic analysis. The larger story is one of work whose techniques connected algebra, analysis, and geometry.</p><a href="https://mathshistory.st-andrews.ac.uk/Biographies/Harish-Chandra/" target="_blank" rel="noopener noreferrer">Explore the references ↗</a></div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="surprise-section" id="quick-fact">
+      <div class="container surprise-wrap">
+        <div>
+          <p class="eyebrow">Quick fact of the moment</p>
+          <h2>A small surprise from the archives.</h2>
+          <p>Let the archive choose your next stop. Each surprise opens a sourced field note with context and a link to read further.</p>
+        </div>
+        <button class="surprise-btn" id="surpriseButton" type="button"><span class="spark" aria-hidden="true">✧</span> Surprise Me with a Fact <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand"><span class="brand-mark" aria-hidden="true">HC</span><div><strong>Know Harish-Chandra</strong><small>Track 07 · Digital Legacy 2026</small></div></div>
+          <p class="footer-copy">An interactive student-exhibition feature about the person, working habits, and intellectual curiosity behind a lasting mathematical legacy. Historical notes are linked to biographical and institutional sources.</p>
+        </div>
+        <div class="credits">
+          <p class="eyebrow">Student attribution</p>
+          <strong id="studentNames">Adarsh, Agrim and Shreyansh</strong>
+          <p id="studentProgramme">M.Sc. Mathematics with AI &amp; DS · 2026</p>
+          <p style="margin-top:10px;color:#78899a;font-size:.68rem">Student contributors · 2026 centenary exhibition</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 · Harish-Chandra Digital Legacy · Track 07</span><span>Designed as a digital reading room · <a href="#top">Return to top ↑</a></span></div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="factModalBackdrop" aria-hidden="true">
+    <section class="fact-modal" id="factModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalStory">
+      <button class="modal-close" id="closeModal" type="button" aria-label="Close quick fact">×</button>
+      <div class="modal-icon" id="modalIcon" aria-hidden="true">✧</div>
+      <p class="eyebrow">Quick fact of the moment</p>
+      <h2 id="modalTitle">A fact from the archive</h2>
+      <p class="modal-story" id="modalStory"></p>
+      <div class="modal-insight" id="modalInsight"></div>
+      <div class="modal-bottom"><a class="source-link" id="modalSource" href="#" target="_blank" rel="noopener noreferrer">Read the source ↗</a><button class="outline-btn" id="anotherFact" type="button">Another fact <span aria-hidden="true">↻</span></button></div>
+    </section>
+  </div>
+
+  <script>
+    /*
+      EDIT THESE SETTINGS when integrating the page into the exhibition site.
+      This standalone page uses a relative exhibition link; update it if your catalogue lives elsewhere.
+    */
+    const EXHIBITION = {
+      backLink: "../index.html#track-07",
+      studentNames: "Adarsh, Agrim and Shreyansh",
+      studentProgramme: "M.Sc. Mathematics with AI & DS · 2026"
+    };
+
+    const SOURCES = {
+      macTutor: { label: "MacTutor · Biography", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Harish-Chandra/" },
+      ias: { label: "Institute for Advanced Study", url: "https://www.ias.edu/scholars/harish-chandra" },
+      langlands: { label: "Robert P. Langlands · Biographical memoir", url: "https://publications.ias.edu/sites/default/files/harish-chandra-biographical-memoirs_rpl_5.pdf" },
+      iisc: { label: "IISc · From physicist to mathematician", url: "https://connect.iisc.ac.in/2023/06/how-a-physicist-became-a-mathematician/" },
+      hri: { label: "Harish-Chandra Research Institute", url: "https://www.hri.res.in/about/harish-chandra/" }
+    };
+
+    // Mock-friendly, source-tagged archive entries. Personal details are only used where documented.
+    const FACTS = [
+      {
+        id: "painting", no: "01", icon: "✧", tag: "Art & Painting", tags: ["Art & Painting", "Anecdotes"], title: "A mathematician with a painter’s eye", hook: "The story of Harish-Chandra includes a quieter artistic thread.", story: "Biographical accounts note that Harish-Chandra liked to paint in his early years and later expressed a fondness for the French Impressionists. The detail offers a human counterpoint to the rigorous, abstract work for which he became known.", insight: "A life of abstraction can still make room for colour, observation, and visual sensibility.", source: "macTutor", sourceNote: "Personal interest recorded in the biography"
+      },
+      {
+        id: "dirac-book", no: "02", icon: "⌁", tag: "Dirac & Princeton", tags: ["Dirac & Princeton", "Anecdotes"], title: "A book that changed direction", hook: "Quantum mechanics first drew him toward theoretical physics.", story: "At the University of Allahabad, Harish-Chandra became interested in theoretical physics after finding and reading P. A. M. Dirac’s Principles of Quantum Mechanics in the university library. He later studied under Dirac at Cambridge.", insight: "Intellectual journeys often begin with one compelling book and a question that will not let go.", source: "macTutor", sourceNote: "Early education and reading"
+      },
+      {
+        id: "pauli", no: "03", icon: "∴", tag: "Anecdotes", tags: ["Anecdotes", "Mathematical Philosophy"], title: "The lecture-hall correction", hook: "A young scholar noticed an error in a lecture by Wolfgang Pauli.", story: "While in Cambridge, Harish-Chandra attended a lecture by physicist Wolfgang Pauli and pointed out a mistake in Pauli’s work. The biographical account notes that they became lifelong friends.", insight: "Careful criticism and mutual respect can live side by side—and sometimes begin a lasting friendship.", source: "macTutor", sourceNote: "Cambridge anecdote"
+      },
+      {
+        id: "dirac-proofs", no: "04", icon: "∑", tag: "Dirac & Princeton", tags: ["Dirac & Princeton", "Mathematical Philosophy", "Anecdotes"], title: "The question of proof", hook: "A reported exchange with Dirac helped clarify his direction.", story: "Harish-Chandra later recalled worrying that his early work with unbounded operators lacked proper attention to their domains. In the account, Dirac replies: “I am not interested in proofs but only in what nature does.” Harish-Chandra found himself increasingly drawn to the standards and methods of mathematics.", insight: "The anecdote captures a disciplinary difference—not a simple verdict on either physics or mathematics.", source: "langlands", sourceNote: "As recounted in the biographical memoir"
+      },
+      {
+        id: "princeton-turn", no: "05", icon: "↗", tag: "Dirac & Princeton", tags: ["Dirac & Princeton", "Mathematical Philosophy"], title: "Princeton became a turning point", hook: "Working near leading mathematicians helped his choice crystallize.", story: "Harish-Chandra accompanied Dirac to Princeton in 1947–48 as his assistant. Exposure to mathematicians including Hermann Weyl, Emil Artin, and Claude Chevalley influenced him, and it was in Princeton that he finally decided to pursue mathematics rather than physics.", insight: "A change of field can emerge gradually through encounters, doubts, and new intellectual communities.", source: "macTutor", sourceNote: "Princeton, 1947–48"
+      },
+      {
+        id: "intuition", no: "06", icon: "✳", tag: "Mathematical Philosophy", tags: ["Mathematical Philosophy", "Anecdotes"], title: "Imagination has a role in proof", hook: "He reflected on the tension between knowledge and intuition.", story: "Harish-Chandra considered how accumulated knowledge can encourage caution while imagination can open unexpected paths. In the biographical memoir, he suggests that a certain “naïveté, unburdened by conventional wisdom” can sometimes be an asset in discovery.", insight: "Rigour tests an idea; imagination may be what lets us see it in the first place.", source: "langlands", sourceNote: "Harish-Chandra on mathematical discovery"
+      },
+      {
+        id: "fuzzy-thinking", no: "07", icon: "≈", tag: "Mathematical Philosophy", tags: ["Mathematical Philosophy"], title: "Clear thinking—and fuzzy thinking", hook: "One of his best-known reflections makes room for intuition.", story: "A remark attributed to Harish-Chandra in Robert Langlands’s biographical memoir reads: “In mathematics we agree that clear thinking is very important, but fuzzy thinking is just as important.” It is an invitation to distinguish the final clarity of a proof from the less tidy process that may lead to it.", insight: "The finished argument can be precise even when discovery begins as an intuition.", source: "langlands", sourceNote: "Quotation cited through Langlands’s memoir"
+      },
+      {
+        id: "cambridge", no: "08", icon: "⌂", tag: "Daily Discipline", tags: ["Daily Discipline", "Dirac & Princeton"], title: "He broadened his toolkit in Cambridge", hook: "Physics training did not stop him exploring mathematics beyond his thesis.", story: "During his Cambridge years, Harish-Chandra attended mathematics lectures by J. E. Littlewood and Philip Hall while studying under Dirac. His doctoral thesis, completed in 1947, concerned infinite irreducible representations of the Lorentz group.", insight: "Serious study often means following questions across the boundaries of one’s formal training.", source: "macTutor", sourceNote: "Cambridge study and thesis"
+      },
+      {
+        id: "weil-walks", no: "09", icon: "⌁", tag: "Daily Discipline", tags: ["Daily Discipline", "Anecdotes"], title: "Some ideas travelled on foot", hook: "Research conversations were not confined to a seminar room.", story: "During a Guggenheim fellowship in Paris in 1957–58, Harish-Chandra worked with André Weil. The biography records that the two often went walking together—one of the small glimpses of the collaborative life behind mathematical work.", insight: "Conversation and movement can be part of a scholar’s working life, even when the exact daily routine is not documented.", source: "macTutor", sourceNote: "Paris fellowship, 1957–58"
+      },
+      {
+        id: "columbia", no: "10", icon: "⌘", tag: "Daily Discipline", tags: ["Daily Discipline", "Mathematical Philosophy"], title: "A long, productive stretch at Columbia", hook: "The years 1950–1963 were central to his research.", story: "At Columbia University, Harish-Chandra developed major work on representations of semisimple Lie groups. His research brought together strands of algebra, analysis, and geometry, helping shape a field that became central to modern mathematics.", insight: "Deep contributions usually grow over sustained periods of concentrated work, not a single eureka moment.", source: "ias", sourceNote: "Research overview and career"
+      },
+      {
+        id: "walks", no: "11", icon: "◌", tag: "Daily Discipline", tags: ["Daily Discipline", "Anecdotes"], title: "A keen walker throughout his life", hook: "Walking appears more than once in the biographical record.", story: "Robert Langlands’s memoir notes that Harish-Chandra remained a keen walker throughout his life and remembered hikes in Kashmir with pleasure. Other accounts mention walks with André Weil in Paris and his customary walk in Princeton.", insight: "This is a documented recurring detail—not evidence of a prescribed schedule or productivity ritual.", source: "langlands", sourceNote: "Personal recollections in the memoir"
+      },
+      {
+        id: "legacy", no: "12", icon: "∞", tag: "Mathematical Philosophy", tags: ["Mathematical Philosophy", "Anecdotes"], title: "A theory that changed the map", hook: "His work helped move representation theory from the margins toward the centre.", story: "Harish-Chandra built a fundamental theory of representations of Lie groups and Lie algebras, and of harmonic analysis on them. Robert Langlands described him as one of those who transformed infinite-dimensional group representation theory into a major field of contemporary mathematics.", insight: "The legacy is both technical and connective: new tools made relationships among mathematical areas visible.", source: "langlands", sourceNote: "Langlands’s biographical memoir"
+      }
+    ];
+
+    const TIMELINE = [
+      { year: "1941–43", title: "A book opens a door", description: "At the University of Allahabad, Harish-Chandra studied theoretical physics after encountering P. A. M. Dirac’s book on quantum mechanics. That early fascination led him into research with Homi J. Bhabha at the Indian Institute of Science in Bangalore.", chip: "Origins · Physics" },
+      { year: "1945–47", title: "Questions cross disciplines", description: "At Cambridge, he worked under Dirac while also attending mathematics lectures by J. E. Littlewood and Philip Hall. He pointed out a mistake in Wolfgang Pauli’s lecture, and the two later became lifelong friends. He completed his Ph.D. in 1947.", chip: "Cambridge · Learning" },
+      { year: "1947–50", title: "A decision in Princeton", description: "As Dirac’s assistant at the Institute for Advanced Study, Harish-Chandra encountered influential mathematicians including Hermann Weyl, Emil Artin, and Claude Chevalley. His concern for rigorous proof and growing mathematical interests helped him commit to mathematics.", chip: "Princeton · Turning point" },
+      { year: "1950–63", title: "Building a framework", description: "During his Columbia years, Harish-Chandra developed fundamental work on representations of semisimple Lie groups. He also spent time at other research institutions and worked with leading scholars, including André Weil.", chip: "Columbia · Research" },
+      { year: "1963–83", title: "A lasting research home", description: "Harish-Chandra joined the Institute for Advanced Study in Princeton in 1963 and continued research that helped shape representation theory and harmonic analysis. His papers connected ideas across algebra, analysis, geometry, and mathematical physics.", chip: "Institute for Advanced Study · Legacy" }
+    ];
+
+    const QUOTES = [
+      { text: "In mathematics we agree that clear thinking is very important, but fuzzy thinking is just as important.", author: "Harish-Chandra", context: "On intuition and mathematical discovery", initials: "HC", source: "langlands" },
+      { text: "A certain naïveté, unburdened by conventional wisdom, can sometimes be a positive asset.", author: "Harish-Chandra", context: "On knowledge, experience, and imagination", initials: "HC", source: "langlands" },
+      { text: "I am not interested in proofs but only in what nature does.", author: "P. A. M. Dirac", context: "A remark recalled in Harish-Chandra’s account of his move toward mathematics", initials: "PD", source: "macTutor" },
+      { text: "His work helped transform a peripheral topic into a major field of contemporary mathematics.", author: "Robert P. Langlands", context: "A biographer’s view of the mathematical legacy", initials: "RL", source: "langlands" }
+    ];
+
+    const factGrid = document.getElementById("factGrid");
+    const searchInput = document.getElementById("factSearch");
+    const filterButtons = [...document.querySelectorAll(".filter-btn")];
+    const resultCount = document.getElementById("resultCount");
+    let currentFilter = "All";
+    let lastSurpriseId = null;
+    let lastFocusedElement = null;
+    let currentQuote = 0;
+
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+    }
+
+    function getFactSource(fact) { return SOURCES[fact.source] || SOURCES.macTutor; }
+
+    function cardTemplate(fact) {
+      const safeTitle = escapeHTML(fact.title);
+      const source = getFactSource(fact);
+      return `
+        <article class="fact-card" data-card-id="${escapeHTML(fact.id)}" aria-label="Field note ${escapeHTML(fact.no)}: ${safeTitle}">
+          <div class="flip-inner">
+            <div class="card-face card-front">
+              <div class="card-top"><span class="card-number">FIELD NOTE / ${escapeHTML(fact.no)}</span><span class="tag">${escapeHTML(fact.tag)}</span></div>
+              <div class="card-icon" aria-hidden="true">${escapeHTML(fact.icon)}</div>
+              <h3>${safeTitle}</h3>
+              <p class="hook">${escapeHTML(fact.hook)}</p>
+              <div class="card-tags">${fact.tags.slice(0, 3).map(tag => `<span class="mini-tag">${escapeHTML(tag)}</span>`).join("")}</div>
+            </div>
+            <div class="card-face card-back">
+              <span class="back-kicker">The story behind the question</span>
+              <h3>${safeTitle}</h3>
+              <p class="story">${escapeHTML(fact.story)}</p>
+              <div class="insight"><strong>Insight:</strong> ${escapeHTML(fact.insight)}</div>
+              <a class="source-link" href="${source.url}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.label)} ↗</a>
+            </div>
+          </div>
+          <button class="flip-control" type="button" aria-pressed="false" aria-label="Turn card: ${safeTitle}"><span class="flip-label">Flip to discover</span><span class="turn-icon" aria-hidden="true">↻</span></button>
+        </article>`;
+    }
+
+    function renderFacts() {
+      const query = searchInput.value.trim().toLowerCase();
+      const filtered = FACTS.filter(fact => {
+        const matchesFilter = currentFilter === "All" || fact.tags.includes(currentFilter) || fact.tag === currentFilter;
+        const searchable = [fact.title, fact.hook, fact.story, fact.insight, fact.tag, ...fact.tags].join(" ").toLowerCase();
+        return matchesFilter && (!query || searchable.includes(query));
+      });
+      factGrid.innerHTML = filtered.length ? filtered.map(cardTemplate).join("") : `<div class="empty-state"><strong>No field notes found</strong>Try a different search or choose another theme.</div>`;
+      resultCount.textContent = `${filtered.length} field note${filtered.length === 1 ? "" : "s"}${query || currentFilter !== "All" ? " found" : " in the archive"}`;
+    }
+
+    filterButtons.forEach(button => button.addEventListener("click", () => {
+      currentFilter = button.dataset.filter;
+      filterButtons.forEach(candidate => candidate.setAttribute("aria-pressed", String(candidate === button)));
+      renderFacts();
+    }));
+    searchInput.addEventListener("input", renderFacts);
+    document.getElementById("resetFilters").addEventListener("click", () => {
+      currentFilter = "All";
+      searchInput.value = "";
+      filterButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.filter === "All")));
+      renderFacts();
+      searchInput.focus();
+    });
+    document.getElementById("showAllFacts").addEventListener("click", () => {
+      currentFilter = "All";
+      searchInput.value = "";
+      filterButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.filter === "All")));
+      renderFacts();
+      document.getElementById("field-notes").scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+
+    // A single persistent flip button per card keeps links on the reverse face keyboard accessible.
+    factGrid.addEventListener("click", event => {
+      const button = event.target.closest(".flip-control");
+      if (!button) return;
+      const card = button.closest(".fact-card");
+      const flipped = card.classList.toggle("is-flipped");
+      button.setAttribute("aria-pressed", String(flipped));
+      button.querySelector(".flip-label").textContent = flipped ? "Back to question" : "Flip to discover";
+      button.setAttribute("aria-label", `${flipped ? "Return to question" : "Turn card"}: ${card.querySelector(".card-front h3").textContent}`);
+    });
+
+    // Timeline tabs
+    const timelineTabs = [...document.querySelectorAll(".time-tab")];
+    function activateTimeline(index, moveFocus = false) {
+      const data = TIMELINE[index];
+      timelineTabs.forEach((tab, i) => {
+        tab.setAttribute("aria-selected", String(i === index));
+        tab.tabIndex = i === index ? 0 : -1;
+      });
+      const panel = document.getElementById("timelinePanel");
+      panel.setAttribute("aria-labelledby", `time-tab-${index}`);
+      document.getElementById("timelineNo").textContent = `CHAPTER 0${index + 1} · ${data.year}`;
+      document.getElementById("timelineTitle").textContent = data.title;
+      document.getElementById("timelineDescription").textContent = data.description;
+      document.getElementById("timelineChip").textContent = data.chip;
+      if (moveFocus) timelineTabs[index].focus();
+    }
+    timelineTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activateTimeline(index));
+      tab.addEventListener("keydown", event => {
+        let next = index;
+        if (event.key === "ArrowDown" || event.key === "ArrowRight") next = (index + 1) % timelineTabs.length;
+        else if (event.key === "ArrowUp" || event.key === "ArrowLeft") next = (index - 1 + timelineTabs.length) % timelineTabs.length;
+        else if (event.key === "Home") next = 0;
+        else if (event.key === "End") next = timelineTabs.length - 1;
+        else return;
+        event.preventDefault(); activateTimeline(next, true);
+      });
+    });
+    activateTimeline(0);
+
+    // Quotes carousel
+    const quoteText = document.getElementById("quoteText");
+    const quoteAuthor = document.getElementById("quoteAuthor");
+    const quoteContext = document.getElementById("quoteContext");
+    const quoteAvatar = document.getElementById("quoteAvatar");
+    const quoteSource = document.getElementById("quoteSource");
+    const quoteDots = document.getElementById("quoteDots");
+    function renderQuoteDots() {
+      quoteDots.innerHTML = QUOTES.map((quote, index) => `<button class="quote-dot" type="button" aria-label="Show quote ${index + 1}" aria-current="${String(index === currentQuote)}" data-quote="${index}"></button>`).join("");
+    }
+    function showQuote(index) {
+      currentQuote = (index + QUOTES.length) % QUOTES.length;
+      const quote = QUOTES[currentQuote];
+      quoteText.textContent = quote.text;
+      quoteAuthor.textContent = quote.author;
+      quoteContext.textContent = quote.context;
+      quoteAvatar.textContent = quote.initials;
+      const quoteSourceInfo = SOURCES[quote.source] || SOURCES.langlands;
+      quoteSource.href = quoteSourceInfo.url;
+      quoteSource.textContent = `Read source context: ${quoteSourceInfo.label} ↗`;
+      renderQuoteDots();
+    }
+    document.getElementById("quotePrev").addEventListener("click", () => showQuote(currentQuote - 1));
+    document.getElementById("quoteNext").addEventListener("click", () => showQuote(currentQuote + 1));
+    quoteDots.addEventListener("click", event => {
+      const button = event.target.closest("[data-quote]");
+      if (button) showQuote(Number(button.dataset.quote));
+    });
+    showQuote(0);
+
+    // Quick fact modal: focus is returned to the opener after close; Escape and backdrop clicks work.
+    const backdrop = document.getElementById("factModalBackdrop");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalStory = document.getElementById("modalStory");
+    const modalIcon = document.getElementById("modalIcon");
+    const modalInsight = document.getElementById("modalInsight");
+    const modalSource = document.getElementById("modalSource");
+    function openFactModal(fact, opener = document.getElementById("surpriseButton")) {
+      const source = getFactSource(fact);
+      lastFocusedElement = opener;
+      modalIcon.textContent = fact.icon;
+      modalTitle.textContent = fact.title;
+      modalStory.textContent = fact.story;
+      modalInsight.innerHTML = `<strong>Insight:</strong> ${escapeHTML(fact.insight)}`;
+      modalSource.href = source.url;
+      modalSource.textContent = `${source.label} ↗`;
+      backdrop.classList.add("is-open");
+      backdrop.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      document.getElementById("closeModal").focus();
+    }
+    function closeFactModal() {
+      backdrop.classList.remove("is-open");
+      backdrop.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      if (lastFocusedElement && typeof lastFocusedElement.focus === "function") lastFocusedElement.focus();
+    }
+    function chooseSurprise() {
+      const choices = FACTS.filter(fact => fact.id !== lastSurpriseId);
+      const fact = choices[Math.floor(Math.random() * choices.length)];
+      lastSurpriseId = fact.id;
+      return fact;
+    }
+    document.getElementById("surpriseButton").addEventListener("click", event => openFactModal(chooseSurprise(), event.currentTarget));
+    document.getElementById("anotherFact").addEventListener("click", event => openFactModal(chooseSurprise(), event.currentTarget));
+    document.getElementById("closeModal").addEventListener("click", closeFactModal);
+    backdrop.addEventListener("click", event => { if (event.target === backdrop) closeFactModal(); });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && backdrop.classList.contains("is-open")) closeFactModal();
+      if (event.key === "Tab" && backdrop.classList.contains("is-open")) {
+        const focusable = [...backdrop.querySelectorAll("button, a[href]")].filter(el => !el.disabled);
+        const first = focusable[0], last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    });
+
+    // Apply editable exhibition credit and return link.
+    document.getElementById("backToExhibition").href = EXHIBITION.backLink;
+    document.getElementById("studentNames").textContent = EXHIBITION.studentNames;
+    document.getElementById("studentProgramme").textContent = EXHIBITION.studentProgramme;
+
+    renderFacts();
+  </script>
+</body>
+</html>
